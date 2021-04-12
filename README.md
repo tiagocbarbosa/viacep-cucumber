@@ -16,4 +16,6 @@ Finalizar este README.md
 
 [Adding Cucumber dependecies](https://cucumber.io/docs/installation/ruby/)
 
+[Defining step definition](https://www.guru99.com/cucumber-basics.html)
+
 [Executing .feature file](https://www.youtube.com/watch?v=YcepXZ2VR0I)
