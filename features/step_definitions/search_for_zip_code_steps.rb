@@ -19,6 +19,14 @@ Given(/^the informed city is ([^"]*)$/) do |city|
   @url += "#{city}/"
 end
 
+Given(/^the informed street is ([^"]*)$/) do |street|
+  unless(street_isValid?(street))
+    raise RuntimeError, 'The informed STREET is not valid'
+  end
+  
+  @url += "#{street}/"
+end
+
 #...
 
 def uf_isValid?(uf)
@@ -33,6 +41,15 @@ end
 def city_isValid?(city)
   # city must contains at least 3 (three) characters
   if(uf.length < 3)
+    false
+  else
+    true
+  end
+end
+
+def street_isValid?(street)
+  # street must contains at least 3 (three) characters
+  if(street.length < 3)
     false
   else
     true
