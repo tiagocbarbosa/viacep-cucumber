@@ -1,12 +1,13 @@
 # viacep-cucumber
 
-TO DO: criar um cenário de testes para cada validação:
-- buscar usando endereço válido: https://viacep.com.br/ws/BA/Lauro De Freitas/Rua José Leite/json/
-- buscar usando cep válido: https://viacep.com.br/ws/41205017/json/
-- buscar usando cep inválido: https://viacep.com.br/ws/99999999/json/
-- buscar usando cep no formato inválido: https://viacep.com.br/ws/950100100/json/
+### TO DO:
+Criar um cenário de testes para cada validação
+> - buscar usando endereço válido: https://viacep.com.br/ws/BA/Lauro De Freitas/Rua José Leite/json/
+> - buscar usando cep válido: https://viacep.com.br/ws/41205017/json/
+> - buscar usando cep inválido: https://viacep.com.br/ws/99999999/json/
+> - buscar usando cep no formato inválido: https://viacep.com.br/ws/950100100/json/
 
-TO DO: finalizar esse README.md
+Finalizar este README.md
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
