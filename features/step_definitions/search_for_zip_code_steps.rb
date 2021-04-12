@@ -27,10 +27,19 @@ Given(/^the informed street is ([^"]*)$/) do |street|
   @url += "#{street}/"
 end
 
+Given(/^the return format defined was "([^"]*)"$/) do |return_format|
+  return_format.downcase!
+  if(return_format == 'json')
+    @url += "#{return_format}/"
+  else
+    raise RuntimeError, 'The return format is not valid or was not informed'
+  end  
+end
+
 #...
 
+# UF must contains 2 (two) characters
 def uf_isValid?(uf)
-  # UF must contains 2 (two) characters
   if(uf.length != 2)
     false
   else
@@ -38,8 +47,8 @@ def uf_isValid?(uf)
   end
 end
 
+# City must contains at least 3 (three) characters
 def city_isValid?(city)
-  # city must contains at least 3 (three) characters
   if(uf.length < 3)
     false
   else
@@ -47,8 +56,8 @@ def city_isValid?(city)
   end
 end
 
+# Street must contains at least 3 (three) characters
 def street_isValid?(street)
-  # street must contains at least 3 (three) characters
   if(street.length < 3)
     false
   else
