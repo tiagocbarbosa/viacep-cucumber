@@ -9,6 +9,15 @@ Criar um cenário de testes para cada validação
 
 Finalizar este README.md
 
+## Running the project
+Run the following script in the directory of the project to execute it (I do recommend to use the CMDER shell):
+
+```sh
+cucumber features\search_for_zip_code.feature --publish-quiet
+```
+
+ *The --publish-quiet option is to disable a LOG message from the Cucumber framework*
+
 ## References
 [ViaCEP API document](https://viacep.com.br/)
 
@@ -17,5 +26,7 @@ Finalizar este README.md
 [Adding Cucumber dependecies](https://cucumber.io/docs/installation/ruby/)
 
 [Defining step definition](https://www.guru99.com/cucumber-basics.html)
+
+[CMDER shell](https://cmder.net/)
 
 [Executing .feature file](https://www.youtube.com/watch?v=YcepXZ2VR0I)
