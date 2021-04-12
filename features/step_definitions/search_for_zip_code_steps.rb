@@ -1,4 +1,4 @@
-Given('a search for a zip code') do
+Given(/^a search for a zip code$/) do
   @url = 'https://viacep.com.br/ws/'
 end
 
@@ -13,11 +13,11 @@ Given(/^the informed state is ([^"]*)$/) do |uf|
   log(@url)
 end
 
+#...
+
 def uf_isValid?(uf)
   if(uf.length != 2)
     false
   end
   true
 end
-
-#...
