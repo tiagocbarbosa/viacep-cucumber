@@ -1,13 +1,12 @@
 # viacep-cucumber
 
 ### TO DO:
-Criar um cenário de testes para cada validação
+> Criar um cenário de testes para cada validação
 > - buscar usando endereço válido: https://viacep.com.br/ws/BA/Lauro De Freitas/Rua José Leite/json/
 > - buscar usando cep válido: https://viacep.com.br/ws/41205017/json/
 > - buscar usando cep inválido: https://viacep.com.br/ws/99999999/json/
 > - buscar usando cep no formato inválido: https://viacep.com.br/ws/950100100/json/
-
-Finalizar este README.md
+> Finalizar este README.md
 
 ## Running the project
 Run the following script in the directory of the project to execute it (I do recommend to use the CMDER shell):
@@ -17,6 +16,8 @@ cucumber features\search_for_zip_code.feature --publish-quiet
 ```
 
  *The --publish-quiet option is to disable a LOG message from the Cucumber framework*
+ 
+ // ...
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
