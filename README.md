@@ -18,7 +18,7 @@ cucumber features\search_for_zip_code.feature --publish-quiet
 
  *The --publish-quiet option is to disable a LOG message from the Cucumber framework*
  
-TO BE CONTINUED...
+// to be continued...
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
