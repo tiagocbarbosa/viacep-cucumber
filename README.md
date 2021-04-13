@@ -23,6 +23,8 @@ cucumber features\search_for_zip_code.feature --publish-quiet
 ## References
 [ViaCEP API document](https://viacep.com.br/)
 
+[ViaCEP Ruby gem](https://github.com/marcelobarreto/via_cep)
+
 [Creating Ruby basic structure](https://stackoverflow.com/questions/30358612/how-to-create-a-gemfile)
 
 [Adding Cucumber dependecies](https://cucumber.io/docs/installation/ruby/)
