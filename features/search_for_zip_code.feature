@@ -10,7 +10,7 @@ Feature: Search for zip code
         * the informed state is <uf>
         * the informed city is <city>
         * the informed street is <street>
-        And the return format defined was "json"
+        # And the return format defined was "json"
         When search for the zip code
         Then validate if the zip code matches with "42722-020"
 
