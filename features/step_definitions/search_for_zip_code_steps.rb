@@ -1,7 +1,7 @@
 require 'via_cep'
 
 Given(/^a search for a zip code$/) do
-  @url = 'https://viacep.com.br/ws/'
+  @base_url = 'https://viacep.com.br/ws/'
 end
 
 Given(/^the informed state is ([^"]*)$/) do |uf|
