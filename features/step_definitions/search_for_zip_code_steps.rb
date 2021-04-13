@@ -33,7 +33,7 @@ end
 Given(/^the return format defined was "([^"]*)"$/) do |return_format|
   return_format.downcase!
   if(return_format == 'json')
-    @return_format += "#{return_format}/"
+    @return_format = return_format
   else
     raise RuntimeError, 'The return format is not valid or was not informed'
   end  
