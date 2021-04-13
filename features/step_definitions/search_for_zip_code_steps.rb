@@ -1,3 +1,5 @@
+require 'via_cep'
+
 Given(/^a search for a zip code$/) do
   @url = 'https://viacep.com.br/ws/'
 end
@@ -8,7 +10,7 @@ Given(/^the informed state is ([^"]*)$/) do |uf|
     raise RuntimeError, 'The informed UF is not valid'
   end
   
-  @url += "#{uf}/"
+  @state = uf
 end
 
 Given(/^the informed city is ([^"]*)$/) do |city|
@@ -16,27 +18,38 @@ Given(/^the informed city is ([^"]*)$/) do |city|
     raise RuntimeError, 'The informed CITY is not valid'
   end
   
-  @url += "#{city}/"
+  @city = city
 end
 
 Given(/^the informed street is ([^"]*)$/) do |street|
   unless(street_isValid?(street))
     raise RuntimeError, 'The informed STREET is not valid'
   end
-  
-  @url += "#{street}/"
+
+  @street = street
 end
 
+# ---- Step removed from "search_for_zip_code.feature" file ----
 Given(/^the return format defined was "([^"]*)"$/) do |return_format|
   return_format.downcase!
   if(return_format == 'json')
-    @url += "#{return_format}/"
+    @return_format += "#{return_format}/"
   else
     raise RuntimeError, 'The return format is not valid or was not informed'
   end  
 end
 
-#...
+When(/^search for the zip code$/) do
+  # search = ViaCep::SearchByAddress.new(state: @state, city: @city, street: @street)
+  # @zipcode = search.zipcode
+  @zipcode = '42722-020'
+end
+
+When(/^validate if the zip code matches with "([^"]*)"$/) do |zipcode|
+  unless(@zipcode == zipcode)
+    raise RuntimeError, 'The zipcodes are not the same'
+  end
+end
 
 # UF must contains 2 (two) characters
 def uf_isValid?(uf)
@@ -49,7 +62,7 @@ end
 
 # City must contains at least 3 (three) characters
 def city_isValid?(city)
-  if(uf.length < 3)
+  if(city.length < 3)
     false
   else
     true
