@@ -1,3 +1,6 @@
+require 'httparty'
+require 'json'
+
 class String
     def numeric?
         Float(self) != nil rescue false
@@ -13,7 +16,6 @@ And(/^a value of ([^"]*)$/) do |zipcode|
         raise RuntimeError, 'The zip code is alphanumeric or does not have 8 digits'
     end
 
-    log(zipcode)
     @zipcode = zipcode
 end
 
@@ -24,6 +26,14 @@ Given(/^the return format of "([^"]*)"$/) do |return_format|
     else
       raise RuntimeError, 'The return format is not valid or was not informed'
     end  
+end
+
+When (/^I search for the address$/) do
+    response = HTTParty.get("#{@base_url}/#{@zipcode}/#{@return_format}/")
+    if(response.code == 200)
+        @street = response.parsed_response['logradouro']
+    end
+    # write ELSEs statements
 end
 
 # ...
