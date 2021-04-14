@@ -30,6 +30,10 @@ cucumber features\search_for_zip_code.feature --publish-quiet
 
 [Defining step definition](https://www.guru99.com/cucumber-basics.html)
 
+[Check if a String is numeric](https://mentalized.net/journal/2011/04/14/ruby-how-to-check-if-a-string-is-numeric/)
+
+[HTTParty gem](https://github.com/jnunemaker/httparty)
+
 [CMDER shell](https://cmder.net/)
 
 [Executing .feature file](https://www.youtube.com/watch?v=YcepXZ2VR0I)
