@@ -1,4 +1,13 @@
 # viacep-cucumber
+This is my [ViaCEP](https://viacep.com.br/) public API validation project using Cucumber and Ruby technologies. 
+
+## About
+This is my personal project created to apply my programming knowledge.
+
+### Technologies involved
+`cucumber` `ruby`
+
+## Characteristics
 
 #### TO DO:
 > Criar um cenário de testes para cada validação
