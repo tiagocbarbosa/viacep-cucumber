@@ -9,3 +9,5 @@ gem "rspec-expectations"
 gem "cucumber"
 
 gem 'via_cep'
+
+gem 'httparty'
