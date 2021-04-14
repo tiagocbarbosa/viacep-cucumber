@@ -31,6 +31,26 @@ Feature: Search for address
 
 */features/search_for_address.feature*
 
+- It has step definitions writen in Ruby.
+
+```ruby
+Given(/^a zip code search$/) do
+ @base_url = 'https://viacep.com.br/ws/'
+end
+
+And(/^a value of ([^"]*)$/) do |zipcode|
+ unless(zipcode_isValid?(zipcode))
+   raise RuntimeError, 'The zip code is alphanumeric or does not have 8 digits'
+ end
+
+ @zipcode = zipcode
+end
+
+# ...
+```
+
+*/features/step_definitions/search_for_address_steps.ruby*
+
 
 #### TO DO:
 > Criar um cenário de testes para cada validação
