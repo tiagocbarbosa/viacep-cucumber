@@ -1,6 +1,7 @@
 require 'httparty'
 require 'json'
 
+# Class to check if a String is numeric
 class String
     def numeric?
         Float(self) != nil rescue false
@@ -32,11 +33,17 @@ When (/^I search for the address$/) do
     response = HTTParty.get("#{@base_url}/#{@zipcode}/#{@return_format}/")
     if(response.code == 200)
         @street = response.parsed_response['logradouro']
+    else
+        raise RuntimeError, 'Error getting the response'
     end
-    # write ELSEs statements
+    # write more ELSE statements
 end
 
-# ...
+Then (/^I validate the street value matches with ([^"]*)$/) do |street|
+    unless(@street == street)
+        raise RuntimeError, 'The streets are not the same'
+    end
+end
 
 # Zip code must be a 8 digit number
 def zipcode_isValid?(zipcode)
