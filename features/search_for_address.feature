@@ -4,7 +4,7 @@ Feature: Search for address
     8 digit zip code (e.g., '01001000'). Also the return format
     must be defined, it can be JSON, XML, Querty...
 
-    Scenario: User informs valid zip code
+    Scenario Outline: User informs valid zip code
         Given a zip code search
         And a value of <zipcode>
         And the return format of "json"
@@ -14,3 +14,5 @@ Feature: Search for address
         Examples:
             | zipcode  | street             |
             | 41205017 | Rua Tancredo Neves |
+            | 01001000 | Praça da Sé        |
+            | 91420270 | Rua São Domingos   |
