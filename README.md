@@ -97,7 +97,7 @@ $
 ```
 
 ## Acknowledgments
-That is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn](www.linkedin.com/in/tiagocastrobarbosa).
+That is pretty much it. Did you like my project? Star it and connect with me on my [LinkedIn profile](www.linkedin.com/in/tiagocastrobarbosa).
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
