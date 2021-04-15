@@ -21,6 +21,8 @@ Feature: Search for address
   Examples:
    | zipcode  | street             |
    | 41205017 | Rua Tancredo Neves |
+   | 01001000 | Praça da Sé        |
+   | 91420270 | Rua São Domingos   |
 ```
 
 */features/search_for_address.feature*
@@ -88,10 +90,12 @@ Feature: Search for address
   Examples:
    | zipcode  | street             |
    | 41205017 | Rua Tancredo Neves |
+   | 01001000 | Praça da Sé        |
+   | 91420270 | Rua São Domingos   |
 
-1 scenario (1 passed)
-5 steps (5 passed)
-0m0.540s
+3 scenarios (3 passed)
+15 steps (15 passed)
+0m2.256s
 
 $
 ```
