@@ -1,13 +1,7 @@
 # viacep-cucumber
-This is my [ViaCEP](https://viacep.com.br/) public API validation project using Cucumber and Ruby technologies. 
+This is my personal project created to apply my programming knowledge. In this project, I validate the [ViaCEP](https://viacep.com.br/) public API using Cucumber and Ruby technologies. 
 
-## About
-This is my personal project created to apply my programming knowledge.
-
-### Technologies involved
-`cucumber` `ruby`
-
-### Characteristics
+## Characteristics
  - It has Gherkin syntax in the features files.
 
 ```gherkin
@@ -103,7 +97,7 @@ $
 ```
 
 ## Acknowledgments
-And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn](www.linkedin.com/in/tiagocastrobarbosa).
+That is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn](www.linkedin.com/in/tiagocastrobarbosa).
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
