@@ -75,6 +75,33 @@ cucumber features\search_for_address.feature --publish-quiet
 
 *The --publish-quiet option is to disable a LOG message from the Cucumber framework*
 
+In case of success, the shell of your choice should output something like this:
+
+```sh
+$ cucumber features\search_for_address.feature --publish-quiet
+Feature: Search for address
+ The ViaCEP public API allows to search for a address using a
+ 8 digit zip code (e.g., '01001000'). Also the return format
+ must be defined, it can be JSON, XML, Querty...
+
+ Scenario: User informs valid zip code                    # features/search_for_address.feature:7
+  Given a zip code search                                # features/search_for_address.feature:8
+  And a value of <zipcode>                               # features/search_for_address.feature:9
+  And the return format of "json"                        # features/search_for_address.feature:10
+  When I search for the address                          # features/search_for_address.feature:11
+  Then I validate the street value matches with <street> # features/search_for_address.feature:12
+
+  Examples:
+   | zipcode  | street             |
+   | 41205017 | Rua Tancredo Neves |
+
+1 scenario (1 passed)
+5 steps (5 passed)
+0m0.540s
+
+$
+```
+
 // to be continued...
 
 #### TO DO:
