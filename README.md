@@ -102,16 +102,6 @@ Feature: Search for address
 $
 ```
 
-------
-
-And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn profile](www.linkedin.com/in/tiagocastrobarbosa).
-
-##### TO DO:
-> Criar um cenário de testes para cada validação
-> - buscar usando cep válido: https://viacep.com.br/ws/41205017/json/
-> - buscar usando cep inexistente: https://viacep.com.br/ws/99999999/json/
-> - buscar usando cep no formato inválido: https://viacep.com.br/ws/950100100/json/
-
 ## References
 [ViaCEP API document](https://viacep.com.br/)
 
@@ -130,3 +120,7 @@ And that is pretty much it. Did you like my project? Star it and send me an invi
 [CMDER shell](https://cmder.net/)
 
 [Executing .feature file](https://www.youtube.com/watch?v=YcepXZ2VR0I)
+
+------
+
+And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn profile](www.linkedin.com/in/tiagocastrobarbosa).
