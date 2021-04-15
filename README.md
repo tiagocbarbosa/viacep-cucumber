@@ -1,5 +1,5 @@
 # viacep-cucumber
-This is my personal project created to apply my programming knowledge. In this project, I validate the [ViaCEP](https://viacep.com.br/) public API using Cucumber and Ruby technologies. 
+This is my personal project created to apply my programming knowledge. In this project, I validate the [ViaCEP](https://viacep.com.br/) public API using `cucumber` and `ruby` technologies. 
 
 ## Characteristics
  - It has Gherkin syntax in the features files.
