@@ -31,7 +31,7 @@ Feature: Search for address
 
 */features/search_for_address.feature*
 
-- It has step definitions writen in Ruby.
+- It has step definitions written in Ruby.
 
 ```ruby
 Given(/^a zip code search$/) do
@@ -51,6 +51,20 @@ end
 
 */features/step_definitions/search_for_address_steps.ruby*
 
+- It also has HTTP request using [third party](https://github.com/jnunemaker/httparty) gem.
+
+```ruby
+When (/^I search for the address$/) do
+ response = HTTParty.get("#{@base_url}/#{@zipcode}/#{@return_format}/")
+ if(response.code == 200)
+  @street = response.parsed_response['logradouro']
+ else
+  # ...
+ end 
+end
+```
+
+// to be continued...
 
 #### TO DO:
 > Criar um cenário de testes para cada validação
@@ -68,8 +82,6 @@ cucumber features\search_for_zip_code.feature --publish-quiet
 ```
 
  *The --publish-quiet option is to disable a LOG message from the Cucumber framework*
- 
-// to be continued...
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
