@@ -102,6 +102,9 @@ Feature: Search for address
 $
 ```
 
+## Acknowledgments
+And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn](www.linkedin.com/in/tiagocastrobarbosa).
+
 ## References
 [ViaCEP API document](https://viacep.com.br/)
 
@@ -120,6 +123,3 @@ $
 [CMDER shell](https://cmder.net/)
 
 [Executing .feature file](https://www.youtube.com/watch?v=YcepXZ2VR0I)
-
-## Acknowledgments
-And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn](www.linkedin.com/in/tiagocastrobarbosa).
