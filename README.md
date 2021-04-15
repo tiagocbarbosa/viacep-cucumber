@@ -7,7 +7,7 @@ This is my personal project created to apply my programming knowledge.
 ### Technologies involved
 `cucumber` `ruby`
 
-## Characteristics
+### Characteristics
  - It has Gherkin syntax in the features files.
 
 ```gherkin
@@ -64,6 +64,17 @@ When (/^I search for the address$/) do
 end
 ```
 
+*/features/step_definitions/search_for_address_steps.ruby*
+
+## Running the project
+Run the following script in the directory of the project to execute it (I do recommend to use the CMDER shell):
+
+```sh
+cucumber features\search_for_address.feature --publish-quiet
+```
+
+*The --publish-quiet option is to disable a LOG message from the Cucumber framework*
+
 // to be continued...
 
 #### TO DO:
@@ -73,15 +84,6 @@ end
 > - buscar usando cep no formato inválido: https://viacep.com.br/ws/950100100/json/
  
 > Finalizar este README.md
-
-## Running the project
-Run the following script in the directory of the project to execute it (I do recommend to use the CMDER shell):
-
-```sh
-cucumber features\search_for_zip_code.feature --publish-quiet
-```
-
- *The --publish-quiet option is to disable a LOG message from the Cucumber framework*
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
