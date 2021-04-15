@@ -69,7 +69,7 @@ end
 ## Running the project
 Run the following script in the directory of the project to execute it (I do recommend to use the CMDER shell):
 
-```sh
+```
 cucumber features\search_for_address.feature --publish-quiet
 ```
 
@@ -77,7 +77,7 @@ cucumber features\search_for_address.feature --publish-quiet
 
 In case of success, the shell of your choice should output something like this:
 
-```sh
+```
 $ cucumber features\search_for_address.feature --publish-quiet
 Feature: Search for address
  The ViaCEP public API allows to search for a address using a
