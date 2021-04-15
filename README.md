@@ -67,7 +67,7 @@ end
 */features/step_definitions/search_for_address_steps.ruby*
 
 ## Running the project
-Run the following script in the directory of the project to execute it (I do recommend to use the CMDER shell):
+You can run the following script in the directory of the project to execute it (I do recommend to use the CMDER shell):
 
 ```
 cucumber features\search_for_address.feature --publish-quiet
@@ -84,7 +84,7 @@ Feature: Search for address
  8 digit zip code (e.g., '01001000'). Also the return format
  must be defined, it can be JSON, XML, Querty...
 
- Scenario: User informs valid zip code                    # features/search_for_address.feature:7
+ Scenario: User informs valid zip code                   # features/search_for_address.feature:7
   Given a zip code search                                # features/search_for_address.feature:8
   And a value of <zipcode>                               # features/search_for_address.feature:9
   And the return format of "json"                        # features/search_for_address.feature:10
@@ -102,15 +102,15 @@ Feature: Search for address
 $
 ```
 
-// to be continued...
+------
 
-#### TO DO:
+And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn profile](www.linkedin.com/in/tiagocastrobarbosa).
+
+##### TO DO:
 > Criar um cenário de testes para cada validação
 > - buscar usando cep válido: https://viacep.com.br/ws/41205017/json/
 > - buscar usando cep inexistente: https://viacep.com.br/ws/99999999/json/
 > - buscar usando cep no formato inválido: https://viacep.com.br/ws/950100100/json/
- 
-> Finalizar este README.md
 
 ## References
 [ViaCEP API document](https://viacep.com.br/)
