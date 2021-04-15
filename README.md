@@ -121,5 +121,5 @@ $
 
 [Executing .feature file](https://www.youtube.com/watch?v=YcepXZ2VR0I)
 
-## Thanks
-And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn profile](www.linkedin.com/in/tiagocastrobarbosa).
+## Acknowledgments
+And that is pretty much it. Did you like my project? Star it and send me an invitation on my [LinkedIn](www.linkedin.com/in/tiagocastrobarbosa).
