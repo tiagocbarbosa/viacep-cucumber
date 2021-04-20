@@ -23,6 +23,8 @@ Feature: Search for address
    | 41205017 | Rua Tancredo Neves |
    | 01001000 | Praça da Sé        |
    | 91420270 | Rua São Domingos   |
+
+# ...
 ```
 
 */features/search_for_address.feature*
