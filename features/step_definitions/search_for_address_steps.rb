@@ -20,7 +20,7 @@ And(/^a value of ([^"]*)$/) do |zipcode|
     @zipcode = zipcode
 end
 
-Given(/^the return format of "([^"]*)"$/) do |return_format|
+And(/^the return format of "([^"]*)"$/) do |return_format|
     return_format.downcase!
     if(return_format == 'json')
       @return_format = return_format
@@ -40,8 +40,14 @@ When (/^I search for the address$/) do
 end
 
 Then (/^I validate the street value matches with ([^"]*)$/) do |street|
-    unless(@street == street)
+    unless(street_areSame?(street))
         raise RuntimeError, 'The streets are not the same'
+    end
+end
+
+Then (/^I validate the street value does not match with ([^"]*)$/) do |street|
+    if(street_areSame?(street))
+        raise RuntimeError, 'The streets are the same'
     end
 end
 
@@ -51,5 +57,14 @@ def zipcode_isValid?(zipcode)
         false
     else
         true
+    end
+end
+
+# Check if the streets are the same
+def street_areSame?(street)
+    if(@street == street)
+        true
+    else
+        false
     end
 end
