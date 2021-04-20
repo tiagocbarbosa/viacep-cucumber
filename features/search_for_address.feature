@@ -25,7 +25,7 @@ Feature: Search for address
         Then I validate the street value does not match with <street>
 
         Examples:
-            | zipcode  | street             |
-            | 41205017 | Rua Tancredo Neves |
-            | 01001000 | Praça da Sé        |
-            | 91420270 | Rua São Domingos   |
+            | zipcode  | street              |
+            | 41205017 | Rua Tancredo Chuvas |
+            | 01001000 | Praça da Pé         |
+            | 91420270 | Rua São Sábados     |
