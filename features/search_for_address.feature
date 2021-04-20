@@ -17,7 +17,7 @@ Feature: Search for address
             | 01001000 | Praça da Sé        |
             | 91420270 | Rua São Domingos   |
 
-    Scenario Outline: User informs invalid zip code
+    Scenario Outline: User informs invalid street
         Given a zip code search
         And a value of <zipcode>
         And the return format of "json"
