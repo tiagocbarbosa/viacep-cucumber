@@ -16,3 +16,16 @@ Feature: Search for address
             | 41205017 | Rua Tancredo Neves |
             | 01001000 | Praça da Sé        |
             | 91420270 | Rua São Domingos   |
+
+    Scenario Outline: User informs invalid zip code
+        Given a zip code search
+        And a value of <zipcode>
+        And the return format of "json"
+        When I search for the address
+        Then I validate the street value does not match with <street>
+
+        Examples:
+            | zipcode  | street             |
+            | 41205017 | Rua Tancredo Neves |
+            | 01001000 | Praça da Sé        |
+            | 91420270 | Rua São Domingos   |
