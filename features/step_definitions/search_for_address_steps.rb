@@ -31,12 +31,15 @@ end
 
 When (/^I search for the address$/) do
     response = HTTParty.get("#{@base_url}/#{@zipcode}/#{@return_format}/")
+    # invalid zip codes has 'erro' key in the returned JSON
+    # in case of invalid zip code, it assignes 'true' for @erro variable    
+    @erro = response.body.include? 'erro'
+
     if(response.code == 200)
         @street = response.parsed_response['logradouro']
     else
         raise RuntimeError, 'Error getting the response'
     end
-    # write more ELSE statements
 end
 
 Then (/^I validate the street value matches with ([^"]*)$/) do |street|
@@ -48,6 +51,12 @@ end
 Then (/^I validate the street value does not match with ([^"]*)$/) do |street|
     if(street_areSame?(street))
         raise RuntimeError, 'The streets are the same'
+    end
+end
+
+Then (/^I validate the zip code does not exist$/) do
+    unless(@erro)
+        raise RuntimeError, 'The informed zip code is valid'
     end
 end
 
