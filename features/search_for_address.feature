@@ -29,3 +29,15 @@ Feature: Search for address
             | 41205017 | Rua Tancredo Chuvas |
             | 01001000 | Praça da Pé         |
             | 91420270 | Rua São Sábados     |
+
+    Scenario Outline: User informs invalid zip code
+        Given a zip code search
+        And a value of <zipcode>
+        And the return format of "json"
+        When I search for the address
+        Then I validate the zip code does not exist
+
+        Examples:
+            | zipcode  |
+            | 99999999 |
+            | 88888888 |
